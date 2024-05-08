@@ -1,0 +1,17 @@
+.venv
+.vscode
+*.pyc
+.ipynb_checkpoints
+*.ipynb
+__pycache__
+.pytest_cache
+build
+_build
+.coverage
+coverage.xml
+junit.xml
+.idea
+coverage_report
+dist
+.python-version*
+*.db
