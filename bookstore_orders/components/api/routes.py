@@ -6,7 +6,7 @@ from bookstore_orders.components.schemas.monitoring import Healthz
 from bookstore_orders.components.schemas.responses import (
     BookOrderData
 )
-from bookstore_orders.components.business.order import Order
+from bookstore_orders.components.business.order import ABook
 
 
 def include_routes(app, logger):
@@ -33,6 +33,6 @@ def include_routes(app, logger):
             authorization.replace("Bearer ", ""), options={"verify_signature": False}
         )
         user_id = claims["user_id"]
-        return Order(user_id).ABook().get_book_order(major=major, minor=minor)
+        return ABook(user_id).get_book_order(major=major, minor=minor)
 
     app.include_router(router)

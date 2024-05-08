@@ -35,11 +35,11 @@ class Envs(BaseSettings):
     APPLICATION_NAME: str = "Toads Bookstore Orders"
 
     # DB CONFIG
-    DB_USER: str = "postgres"
-    DB_PASSWORD: str = "postgres"
+    DB_USER: str = "lucas_saporetti"
+    DB_PASSWORD: str = "docbrown"
     DB_HOST: str = "localhost"
     DB_PORT: str = "5432"
-    DB_DATABASE: str = "toads_bookstore"
+    DB_DATABASE: str = "luke_bank"
     DB_SERVICE: str = "postgresql"
     SQLALCHEMY_ECHO: bool = False
 

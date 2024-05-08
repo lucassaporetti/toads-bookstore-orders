@@ -12,11 +12,10 @@ class ErrorDetails:
 
 
 class APIException(Exception):  # pragma: no cover
-    def __init__(self, status_code: int, message: str, error_details: list):
+    def __init__(self, status_code: int, message: str):
         self.message = message
         self.status_code = status_code
         self.error = responses[status_code]
-        self.error_details = error_details
         super().__init__(self.status_code, self.message)
 
 
