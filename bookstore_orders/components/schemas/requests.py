@@ -1,6 +1,6 @@
 from pydantic import BaseModel, PrivateAttr
 
-from app.components.config import envs
+from bookstore_orders.components.config import envs
 
 
 class RequestGetUserWithCpf(BaseModel):

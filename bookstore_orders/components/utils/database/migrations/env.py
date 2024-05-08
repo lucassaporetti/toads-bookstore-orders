@@ -2,11 +2,11 @@ from logging.config import fileConfig
 from alembic import context
 from sqlalchemy import engine_from_config, pool
 
-from app.components.config import envs
-from app.components.models import (  # noqa # pylint: disable=unused-import
+from bookstore_orders.components.config import envs
+from bookstore_orders.components.models import (  # noqa # pylint: disable=unused-import
     book_order
 )
-from app.components.utils.database.service import Base
+from bookstore_orders.components.utils.database.service import Base
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

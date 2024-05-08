@@ -1,16 +1,16 @@
 import logging
 from logging import config
 from importlib.metadata import PackageNotFoundError, version  # type: ignore
+
 import uvicorn
 from fastapi import FastAPI
 
-from app.components.api.exception_handlers import (
+from bookstore_orders.components.api.exception_handlers import (
     include_exception_handlers,
 )
-from app.components.api.middleware import include_middleware
-from app.components.api.routes import include_routes
-from app.components.config import LOGGING_CONFIG, envs
-
+from bookstore_orders.components.api.middleware import include_middleware
+from bookstore_orders.components.api.routes import include_routes
+from bookstore_orders.components.config import LOGGING_CONFIG, envs
 
 config.dictConfig(LOGGING_CONFIG)
 logger = logging.getLogger()
@@ -28,11 +28,11 @@ def api_factory():
     try:
         __version__ = version(__name__)
     except PackageNotFoundError:  # pragma: no cover
-        __version__ = "0.1.0"
+        __version__ = "unknown"
 
     app = FastAPI(
-        title="Toads Bookstore",
-        description="Bookstore test",
+        title="Toads Bookstore Orders",
+        description="",
         version=__version__,
         docs_url="/swagger",
         redoc_url="/docs",

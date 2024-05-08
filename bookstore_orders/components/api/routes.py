@@ -1,12 +1,12 @@
-from fastapi import APIRouter, Header, Response
+from fastapi import APIRouter, Header
 from fastapi.responses import RedirectResponse
 import jwt
 
-from app.components.schemas.monitoring import Healthz
-from app.components.schemas.responses import (
-    BookstoreOrderData
+from bookstore_orders.components.schemas.monitoring import Healthz
+from bookstore_orders.components.schemas.responses import (
+    BookOrderData
 )
-from app.components.business import Order
+from bookstore_orders.components.business.order import Order
 
 
 def include_routes(app, logger):
@@ -24,7 +24,7 @@ def include_routes(app, logger):
 
     @router.get(
         "/orders/book/{major}/{minor}",
-        response_model=BookstoreOrderData,
+        response_model=BookOrderData,
         summary="Get book order",
         description="Get book order data according to major (main category) and minor (subcategory) parameters",
     )

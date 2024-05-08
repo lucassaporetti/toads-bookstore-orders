@@ -20,7 +20,7 @@ LOGGING_CONFIG = {
     },
     "loggers": {
         "": {"handlers": ["default"], "level": "INFO", "propagate": False},
-        "app": {
+        "bookstore_orders": {
             "handlers": ["default"],
             "level": "INFO",
             "propagate": False,
@@ -31,8 +31,8 @@ LOGGING_CONFIG = {
 
 class Envs(BaseSettings):
     HOST_IP: str = "127.0.0.1"
-    HOST_PORT: int = 8001
-    APPLICATION_NAME: str = "ToadsBookstoreOrders"
+    HOST_PORT: int = 8000
+    APPLICATION_NAME: str = "Toads Bookstore Orders"
 
     # DB CONFIG
     DB_USER: str = "postgres"
@@ -44,7 +44,7 @@ class Envs(BaseSettings):
     SQLALCHEMY_ECHO: bool = False
 
     # REGISTRATION CONFIG
-    REGISTRATION_SERVICE_URL: str = "http://localhost:8001"
+    REGISTRATION_SERVICE_URL: str = "http://localhost:8002"
     REGISTRATION_GET_USER_ENDPOINT: str = "/get-user-with-cpf/"
 
     class Config:

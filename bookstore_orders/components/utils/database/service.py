@@ -5,8 +5,8 @@ from sqlalchemy import asc, create_engine, desc
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-from app.components.config import envs
-from app.components.utils.exceptions import UpdateTableException
+from bookstore_orders.components.config import envs
+from bookstore_orders.components.utils.exceptions import UpdateTableException
 
 
 logger = logging.getLogger()

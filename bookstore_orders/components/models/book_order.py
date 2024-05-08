@@ -7,7 +7,7 @@ from sqlalchemy import (
     Float
 )
 
-from app.components.utils.database.service import Base
+from bookstore_orders.components.utils.database.service import Base
 
 
 class BookOrder(Base):

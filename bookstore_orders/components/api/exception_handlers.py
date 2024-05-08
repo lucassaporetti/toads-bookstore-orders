@@ -4,7 +4,7 @@ from starlette.exceptions import HTTPException
 from starlette.requests import Request
 from starlette.responses import JSONResponse
 
-from app.components.utils.exceptions import APIException
+from bookstore_orders.components.utils.exceptions import APIException
 
 
 def include_exception_handlers(app, logger):

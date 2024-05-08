@@ -19,7 +19,7 @@ RUN poetry update self
 RUN poetry install
 
 COPY alembic.ini/ ./
-COPY app/ ./app/
+COPY bookstore_orders/ ./app/
 
 EXPOSE 8000
 CMD ["python", "-m", "app"]

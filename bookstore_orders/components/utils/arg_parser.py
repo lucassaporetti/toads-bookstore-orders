@@ -12,7 +12,7 @@ class ArgParse:
             The application arguments
         """
         arg_parser = argparse.ArgumentParser(
-            description="Run ToadsBookstoreOrders report generator"
+            description="Run Toads Bookstore Orders report generator"
         )
 
         # Execute parse_args()

@@ -1,7 +1,7 @@
 import logging
 import httpx
 
-from app.components.utils.exceptions import ToadsBookstoreOrdersException
+from bookstore_orders.components.utils.exceptions import ToadsBookstoreOrdersException
 
 logger = logging.getLogger()
 
