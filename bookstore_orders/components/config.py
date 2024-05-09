@@ -47,6 +47,9 @@ class Envs(BaseSettings):
     REGISTRATION_SERVICE_URL: str = "http://localhost:8002"
     REGISTRATION_GET_USER_ENDPOINT: str = "/get-user-with-cpf/"
 
+    # SECRET KEY TO VERIFY TOKEN
+    SECRET_KEY: str = "8fYhfuMUT3ZM28iG2lRiAWqo7vL8g1_fGSyVp3rHChw"
+
     class Config:
         case_sensitive = True
 

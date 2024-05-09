@@ -7,6 +7,7 @@ from bookstore_orders.components.schemas.responses import (
     BookOrderData
 )
 from bookstore_orders.components.business.order import ABook
+from bookstore_orders.components.utils.authentication import authenticate
 
 
 def include_routes(app, logger):
@@ -28,9 +29,10 @@ def include_routes(app, logger):
         summary="Get book order",
         description="Get book order data according to major (main category) and minor (subcategory) parameters",
     )
+    @authenticate
     async def get_book_order(major: str, minor: str, authorization=Header(default=None)):
         claims = jwt.decode(
-            authorization.replace("Bearer ", ""), options={"verify_signature": False}
+            authorization.replace("Bearer ", ""), options={"verify_signature": True}
         )
         user_id = claims["user_id"]
         return ABook(user_id).get_book_order(major=major, minor=minor)
